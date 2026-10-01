@@ -1,0 +1,2 @@
+Title: GajaAlert AI - Human-Elephant Conflict Early Warning System
+Methods: HTML5, CSS3, JavaScript, Flask, REST API, Fetch API, Chart.js, Leaflet Map, SQLite, Image Preprocessing, Data Augmentation, CNN (MobileNetV2 Transfer Learning), ReLU, Dropout, Softmax Classification, TensorFlow/Keras.

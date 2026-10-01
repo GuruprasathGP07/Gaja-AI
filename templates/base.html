@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GajaAlert AI - Government of Tamil Nadu Integrated Human-Elephant Conflict Mitigation & Early Warning Operational Platform.">
+  <title>{% block title %}GajaAlert AI | State Wildlife Operations Center{% endblock %}</title>
+
+  <!-- Vendored Stylesheets -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/fonts/fonts.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/leaflet/leaflet.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Official Government Status Bar -->
+  <div class="govt-top-bar" role="status">
+    <div class="govt-top-bar-content">
+      <span>STATE WILDLIFE OPERATIONS & CORRIDOR DEFENSE CENTER &bull; GOVERNMENT OF TAMIL NADU</span>
+      <span>SYSTEM STATUS: <strong>LIVE OPERATIONAL</strong> &bull; <span id="topBarZone">STATE-WIDE TAMIL NADU NETWORK</span></span>
+    </div>
+  </div>
+
+  <header role="banner">
+    <div class="brand">
+      <!-- Official Golden Emblem Crest SVG -->
+      <svg class="govt-crest" width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" stroke="#fbbf24" stroke-width="3" fill="#064e3b" fill-opacity="0.3"/>
+        <path d="M50 12 L60 30 L80 30 L64 42 L70 62 L50 48 L30 62 L36 42 L20 30 L40 30 Z" fill="#fbbf24"/>
+        <path d="M50 45 L50 82 M35 60 L65 60 M40 72 L60 72" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="50" cy="50" r="42" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4 2"/>
+      </svg>
+      <div>
+        <div class="govt-dept-title">DEPARTMENT OF FORESTS & WILDLIFE MITIGATION</div>
+        <h1 class="brand-title">GajaAlert AI™ Operational System</h1>
+      </div>
+      <span class="brand-badge">STATE COMMAND PORTAL</span>
+    </div>
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="/" class="nav-link {% if request.path == '/' %}active{% endif %}">Live Command Dashboard</a>
+      <a href="/evidence" class="nav-link {% if request.path == '/evidence' %}active{% endif %}">System Analytics & Audit</a>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer role="contentinfo">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <p style="font-weight: 700; color: #fbbf24;">GajaAlert AI™ &copy; 2026 &bull; Government of Tamil Nadu Integrated Corridor Security Platform</p>
+        <p style="font-size: 0.78rem; margin-top: 0.25rem; color: var(--text-muted);">
+          Official Record: 685 Human Deaths (522 by Elephants) Mitigated via Real-Time Corridor Monitoring & Automated Warning Dispatch.
+        </p>
+      </div>
+      <div style="font-size: 0.75rem; text-align: right; color: var(--text-muted);">
+        <div>Wildlife Protection Act Security Standard</div>
+        <div>Encrypted GovNet Broadcast Interface</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendored JS Libraries -->
+  <script src="{{ url_for('static', filename='vendor/leaflet/leaflet.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/chartjs/chart.umd.js') }}"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
